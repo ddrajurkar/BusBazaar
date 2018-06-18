@@ -1,0 +1,20 @@
+.bgslider
+{
+    background-color:#780C97;
+}
+/* .carousel-indicators.active
+{
+    background-color:#D8FBFD;
+} */
+.btn-view
+{
+    color: #780C97;
+    background-color: #C1F8F2;
+    border-color: #4DD8C9;
+}
+.btn-view:hover
+{
+    color: #fff;
+    background-color: #7E08A1;
+    border-color: #7E08A1;
+}
