@@ -16,6 +16,7 @@ export class LoadloginService {
     addLoginComponent() {
       const factory = this.factoryResolver
                           .resolveComponentFactory(LoginComponent)
+     
      const component = factory
         .create(this.rootViewContainer.parentInjector)
       this.rootViewContainer.insert(component.hostView)
