@@ -13,6 +13,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component';
 import { LoadloginService } from './loadlogin.service';
 import { MyProfileComponent } from './my-profile/my-profile.component';
+import { RegisterComponent } from './register/register.component';
+import { ForgotpassComponent } from './forgotpass/forgotpass.component';
 
 const appRoutes: Routes = [
   { path: '',
@@ -21,9 +23,12 @@ const appRoutes: Routes = [
   },
   { path: 'home', component: HomeComponent },
   { path: 'contactus', component: ContactComponent },
-  {path:'login',component:LoginComponent},
-  { path: '**', component: PageNotFoundComponent },
-  {path:'myProfile',component:MyProfileComponent}
+  { path:'login',component:LoginComponent},
+  { path:'myProfile',component:MyProfileComponent},
+  { path:'register',component:RegisterComponent},
+  { path:'fp',component:ForgotpassComponent},
+  { path: '**', component: PageNotFoundComponent }
+
 ];
 
 export function getAuthServiceConfigs()
@@ -37,10 +42,10 @@ let config = new AuthServiceConfig([
 id:GoogleLoginProvider.PROVIDER_ID,
 provider:new GoogleLoginProvider("468748689868-i1hg3iuq4q3bl5ji1l4oief7fatdooar.apps.googleusercontent.com")
   },
-  // {
-  //   id:FacebookLoginProvider.PROVIDER_ID,
-  //   provider:new FacebookLoginProvider("")
-  // }
+  {
+    id:FacebookLoginProvider.PROVIDER_ID,
+    provider:new FacebookLoginProvider("1597389820387159")
+  }
 ]);
 return config;
 }
@@ -54,7 +59,9 @@ return config;
     ContactComponent,
     PageNotFoundComponent,
     LoginComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    RegisterComponent,
+    ForgotpassComponent
   ],
   imports: [
     BrowserModule,

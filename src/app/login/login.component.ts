@@ -51,9 +51,25 @@ router:Router
       //this.router.navigateByUrl('**')
     }
   }
-  removeObject(){
-    this._ref.destroy();
-  }  
+ 
+  fbLogin(){
+    this.SocialSignIn('Facebook');
+    if(this.authorized)
+    {
+      this.router.navigate([MyProfileComponent]);
+       //this.router.navigateByUrl('myProfile')
+    }
+    else
+    {
+      this.router.navigate([PageNotFoundComponent]);
+      //this.router.navigateByUrl('**')
+    }
+  }
+
+  // removeObject(){
+  //   this._ref.destroy();
+  // }  
+
   ngOnInit() {
  
   }
