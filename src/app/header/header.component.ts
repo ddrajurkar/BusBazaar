@@ -17,13 +17,18 @@ export class HeaderComponent {
   viewContainerRef: ViewContainerRef
   srvc: any;
 
-  constructor(@Inject(LoadloginService) service) {   
+  constructor(private service:LoadloginService) {   
     this.srvc = service
   }
 
   load() {
     this.srvc.setRootViewContainerRef(this.viewContainerRef)
     this.srvc.addLoginComponent()
+  }
+  remove()
+  {
+    this.srvc.setRootViewContainerRef(this.viewContainerRef)
+    this.srvc.removeLoginComponent()
   }
  
 }

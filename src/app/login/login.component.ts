@@ -10,10 +10,7 @@ import { PageNotFoundComponent } from '../page-not-found/page-not-found.componen
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-//  _ref:any;   
-  // removeObject(){
-  //   this._ref.destroy();
-  // }  
+ _ref:any;
 
 authorized : boolean
 router:Router
@@ -54,7 +51,9 @@ router:Router
       //this.router.navigateByUrl('**')
     }
   }
-
+  removeObject(){
+    this._ref.destroy();
+  }  
   ngOnInit() {
  
   }
